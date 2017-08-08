@@ -94,7 +94,7 @@ struct request {
 	u64         flash_io_latency; //save mmc host command latency
 #endif /*CONFIG_PRODUCT_REALME_SDM710*/
 	union {
-		struct call_single_data csd;
+		call_single_data_t csd;
 		u64 fifo_time;
 	};
 
