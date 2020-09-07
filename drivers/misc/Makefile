@@ -70,6 +70,8 @@ obj-$(CONFIG_VXR200_XR_MISC) += vxr7200.o
 obj-$(CONFIG_OPPO_MOTOR)	+= motor.o
 obj-$(CONFIG_OPPO_MOTOR)	+= oppo_motor/
 obj-y				+= schedx.o
+#endif
+obj-$(CONFIG_BATTERY_SAVER)	+= battery_saver.o
 
 lkdtm-$(CONFIG_LKDTM)		+= lkdtm_core.o
 lkdtm-$(CONFIG_LKDTM)		+= lkdtm_bugs.o
