@@ -1,0 +1,20 @@
+clone: 
+  depth: 1
+kind: pipeline
+name: B0ND07Pipeline
+steps: 
+  - name: submodules
+    image: alpine/git
+    commands:
+     - git submodule init
+     - git submodule update
+  - 
+    environment: 
+     
+    commands:
+      - "curl https://raw.githubusercontent.com/B0ND07/bash-scripts/main/kernel | bash"
+    image: fadlyas/kernel_dockerfile:latest
+    name: Build
+    trigger: 
+      branch: 
+        - master
